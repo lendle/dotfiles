@@ -1,4 +1,4 @@
-dotfiles
+dotfiles 
 ========
 
 Configs and such. Commands here can be from the repo directory to set stuff up.
