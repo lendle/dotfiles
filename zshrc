@@ -5,7 +5,14 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+if [[ -n $SSH_CONNECTION ]]; then
+  ZSH_THEME="robbyrussell"
+else
+  ZSH_THEME="agnoster"
+  DEFAULT_USER=sam
+  eval `dircolors ~/.solarized/dircolors.ansi-dark`
+fi
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -37,7 +44,7 @@ COMPLETION_WAITING_DOTS="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -45,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git sublime sudo colored-man colorize screen)
+plugins=(git sublime colored-man screen rake history-substring-search compleat)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,9 +63,9 @@ export PATH="$HOME/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/
 
 # # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='subl'
-else
   export EDITOR='nano'
+else
+  export EDITOR='subl'
 fi
 
 # Compilation flags
@@ -71,3 +78,8 @@ source /opt/intel/mkl/bin/mklvars.sh intel64 ilp64
 
 export MKL_INTERFACE_LAYER=ILP64
 export MKL_NUM_THREADS=4
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+#something something rvm login shell something
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
