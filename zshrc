@@ -17,6 +17,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ijulia="ipython notebook --profile julia"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
