@@ -1,8 +1,6 @@
-alias ls='ls --color'
-
 alias ipython='python ~/ipython-git/ipython.py'
 
-source ~/.git-completion.bash
+#source ~/.git-completion.bash
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 #export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 3)\]\h\[$(tput setaf 1)\] \W\[$(tput setaf 4)\] \\$\[$(tput sgr0)\] "

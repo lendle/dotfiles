@@ -5,7 +5,6 @@ set PATH /Applications/VisIt.app/Contents/MacOS $PATH
 set PATH $JAVA_HOME/bin $PATH
 set PATH /usr/local/git/bin $PATH
 set PATH /usr/texbin $PATH
-set PATH ~/scala/scala-2.9.2/bin $PATH
 set PATH /Developer/NVIDIA/CUDA-5.0/bin $PATH
 # Setting PATH for EPD-7.2-2
 set PATH /Library/Frameworks/Python.framework/Versions/Current/bin $PATH
@@ -42,6 +41,9 @@ setenv -x LESS_TERMCAP_ue (set_color normal)
 setenv -x LESS_TERMCAP_us (set_color -o green)
 
 set -x EDITOR subl
+set -x JULIA_SHELL bash
+set -x JULIA_ANSWER_COLOR "blue"
+set -x JULIA_INPUT_COLOR "cyan"
 
 #set ruby path 
 rvm use default > /dev/null

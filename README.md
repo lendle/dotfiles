@@ -10,5 +10,5 @@ ln -s `pwd`/profile $HOME/.profile
 
 Set up fish: 
 ``` bash
-mkdir -p $HOME/.config && ln -s `pwd`/config/fish/ $HOME/.config/fish/
+mkdir -p $HOME/.config && ln -s `pwd`/config/fish $HOME/.config/fish
 ```
