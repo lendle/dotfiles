@@ -1,3 +1,4 @@
 [submodule "prezto"]
 	path = prezto
 	url = https://github.com/lendle/prezto.git
+	branch = master
