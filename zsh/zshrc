@@ -12,4 +12,5 @@ fi
 
 # Customize to your needs...
 
-alias ijulia="ipython notebook --profile julia"
+alias ijulia="ipython notebook --profile julia --ip=\"*\""
+alias ijulias="ijulia --no-browser --port=9050"
