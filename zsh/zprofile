@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='subl'
-export VISUAL='subl'
+export EDITOR='subl -w'
+export VISUAL='subl -w'
 export PAGER='less'
 
 #
@@ -43,9 +43,6 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  ~/bin
-  /Users/sam/Library/Enthought/Canopy_64bit/User/bin
-  /opt/local/libexec/gnubin
   /opt/local/bin
   /usr/local/{bin,sbin}
   $path
@@ -79,3 +76,10 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
+source $HOME/.zprofile.local
+
+#make sure ~/bin is on top
+path=(
+  ~/bin
+  $path
+)
